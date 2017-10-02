@@ -1,0 +1,80 @@
+//event example 
+type WorkerWithEvent(id:int64, name:string , age:int32, wage:double, active:bool) = 
+    let mutable _id = id 
+    let mutable _name = name 
+    let mutable _age = age 
+    let mutable _wage = wage
+    let mutable _active = active 
+
+    let idChanged = new Event<unit>()
+    let nameChanged = new Event<unit>()
+    let ageChanged = new Event<unit>()
+    let wageChanged = new Event<unit>()
+    let activeChanged = new Event<unit>()
+
+    member self.IdChanged = idChanged.Publish
+    member self.NameChanged = nameChanged.Publish 
+    member self.AgeChanged = ageChanged.Publish
+    member self.WageChanged = wageChanged.Publish
+    member self.ActiveChanged = activeChanged.Publish
+
+    new() = new WorkerWithEvent(0L , "", 0, 0.0, false)
+
+
+    member self.Id 
+        with get() = _id 
+        and set(value) = 
+            _id <- value 
+            idChanged.Trigger()
+
+    member self.Name 
+        with get() = _name 
+        and set(value) = 
+           _name <- value 
+           nameChanged.Trigger()
+
+    member self.Age 
+        with get() = _age 
+        and set(value) = 
+            _age <- value 
+            ageChanged.Trigger()
+
+    member self.Wage 
+        with get() = _wage 
+        and set(value) = 
+            _wage <- value 
+            wageChanged.Trigger()
+
+    member self.Active 
+        with get() = _active 
+        and set(value) = 
+           _active <- value 
+           activeChanged.Trigger()
+
+
+    override self.ToString() = 
+        sprintf "WorkerWithEvent(%d,%s,%d,%.2f,%b)" self.Id self.Name self.Age self.Wage self.Active
+
+let testWorkerWithEvent = 
+    let w1 = new WorkerWithEvent(1L, "foo", 10, 100.0, true)
+    w1.IdChanged.Add(fun () -> printf "new Id = %d\n" w1.Id)
+    w1.NameChanged.Add(fun() -> printf "new name = %s\n" w1.Name)
+    w1.AgeChanged.Add(fun() -> printf "new age = %d\n" w1.Age)
+    w1.WageChanged.Add(fun() -> printf "new wage = %.2f\n" w1.Wage)
+    w1.ActiveChanged.Add(fun() -> printf "new active = %b\n" w1.Active)
+    w1.Id <- 2L 
+    w1.Name <- "bar"
+    w1.Age <- 20 
+    w1.Wage <- 200.0 
+    w1.Active <- false
+    w1.IdChanged.Add(fun() -> printf "Another IdChanged Event\n")
+    w1.NameChanged.Add(fun() -> printf "Another NameChanged Event\n")
+    w1.AgeChanged.Add(fun() -> printf "Another AgeChanged Event\n")
+    w1.WageChanged.Add(fun() -> printf "Another WageChanged Event\n")
+    w1.ActiveChanged.Add(fun() -> printf "Another ActiveChanged Event\n")
+    printfn ""
+    w1.Id <- 3L 
+    w1.Name <- "bim"
+    w1.Age <- 30
+    w1.Wage <- 300.0
+    w1.Active <- true 
