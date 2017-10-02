@@ -48,6 +48,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Arithmetic.fs" />
+    <Compile Include="DataTypeExample.fs" />
+    <Compile Include="OperatorsExample.fs" />
+    <Compile Include="DecisionMakingExample.fs" />
+    <Compile Include="LoopExample.fs" />
+    <Compile Include="FunctionExample.fs" />
+    <Compile Include="StringExample.fs" />
+    <Compile Include="OptionExample.fs" />
+    <Compile Include="TupleExample.fs" />
+    <Compile Include="RecordExample.fs" />
+    <Compile Include="ListExample.fs" />
+    <Compile Include="SequenceExample.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>
