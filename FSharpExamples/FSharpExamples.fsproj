@@ -60,6 +60,11 @@
     <Compile Include="RecordExample.fs" />
     <Compile Include="ListExample.fs" />
     <Compile Include="SequenceExample.fs" />
+    <Compile Include="SetExample.fs" />
+    <Compile Include="MapExample.fs" />
+    <Compile Include="DiscriminatedUnionExample.fs" />
+    <Compile Include="ArrayExample.fs" />
+    <Compile Include="MutableListExample.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>

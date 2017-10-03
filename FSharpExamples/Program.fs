@@ -114,6 +114,32 @@ let test_SequenceExample() =
 
 
 
+let test_SetExample() = 
+    let runner = new SetExample.SetExample()
+//    runner.example1()
+    runner.example2()
+
+let test_MapExample() = 
+    let runner = new MapExample.MapExample()
+//    runner.example1()
+    runner.example2()
+
+
+let test_DiscriminatedUnionExample() = 
+    let runner = new DiscriminatedUnionExample.DiscriminatedUnionExample()
+    runner.example1()
+
+
+let test_ArrayExample() = 
+    let runner = new ArrayExample.ArrayExample()
+//    runner.example1()
+    runner.example2()
+
+let test_MutableListExample() = 
+    let runner = new MutableListExample.MutableListExample()
+//    runner.example1()
+    runner.example2()
+
 [<EntryPoint>]
 let main argv = 
 //    testModule1()
@@ -131,6 +157,11 @@ let main argv =
 //    test_TupleExample()
 //    test_RecordExample()
 //    test_ListExample()
-    test_SequenceExample()
+//    test_SequenceExample()
+//    test_SetExample()
+//    test_MapExample()
+//    test_DiscriminatedUnionExample()
+//    test_ArrayExample()
+    test_MutableListExample()
     0
    
