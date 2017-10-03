@@ -140,6 +140,97 @@ let test_MutableListExample() =
 //    runner.example1()
     runner.example2()
 
+
+let test_MutableDictionaryExample() = 
+    let runner = new MutableDictionaryExample.MutableDictionaryExample()
+//    runner.example1()
+    runner.example2()
+
+
+let test_FileIOExample() = 
+    let runner = new FileIOExample.FileIOExample()
+//    runner.example1()
+//    runner.example2()
+//    runner.example3()
+//    runner.example4()
+//    runner.example5()
+    runner.example6()
+
+let test_GenericsExample() = 
+    let runner = new GenericsExample.GenericsExample()
+//    runner.example1()
+    runner.example2()
+
+
+let test_DelegateExample() = 
+    let runner = new DelegateExample.DelegateExample()
+//    runner.example1()
+//    runner.example2()
+    runner.example3()
+
+let test_EnumerationExample() = 
+    let runner = new EnumerationExample.EnumerationExample()
+    runner.example1()
+
+
+let test_PatternMatchingExample() =
+    let runner = new PatternMatchingExample.PatternMatchingExample()
+//    runner.example1()
+//    runner.example2()
+//    runner.example3()
+    runner.example4()
+
+
+let test_ExceptionHandlingExample() = 
+    let runner = new ExceptionHandlingExample.ExceptionHandlingExample()
+    runner.example1()
+
+
+let test_ClassExample() = 
+    let runner = new ClassExample.ClassExample()
+//    runner.example1()
+    runner.example2()
+
+let test_InheritanceExample() = 
+    let runner = new InheritanceExample.InheritanceExample()
+    runner.example1()
+
+
+let test_InterfaceExample() = 
+    let runner = new InterfaceExample.InterfaceExample()
+    runner.example1()
+
+
+let test_OperatorOverloadingExample() = 
+    let runner = new OperatorOverloadingExample.OperatorOverloadingExample()
+    runner.example1()
+
+let test_EventExample() = 
+    let runner = new EventExample.EventExample()
+    runner.example1()
+
+
+let test_StructExample() = 
+    let runner = new StructExample.StructExample()
+    runner.example1()
+
+
+let test_ComplexNumber() = 
+    let cn1 = new ComplexNumber.ComplexNumber(3.0, 3.0) 
+    let cn2 = new ComplexNumber.ComplexNumber(2.0, 2.0) 
+    let cnAdd = cn1 + cn2 
+    let cnSub = cn1 - cn2 
+    let cnMul = cn1 * cn2 
+    let cnDiv = cn1 / cn2 
+    printfn "<<ComplexNumber Example>>"
+    printfn "cn1 = %A" cn1 
+    printfn "cn2 = %A" cn2 
+    printfn "cn1 + cn2 = %A" cnAdd 
+    printfn "cn1 - cn2 = %A" cnSub
+    printfn "cn1 * cn2 = %A" cnMul 
+    printfn "cn1 / cn2 = %A" cnDiv 
+    printfn ""
+
 [<EntryPoint>]
 let main argv = 
 //    testModule1()
@@ -162,6 +253,20 @@ let main argv =
 //    test_MapExample()
 //    test_DiscriminatedUnionExample()
 //    test_ArrayExample()
-    test_MutableListExample()
+//    test_MutableListExample()
+//    test_MutableDictionaryExample()
+//    test_FileIOExample()
+//    test_GenericsExample()
+//    test_DelegateExample()
+//    test_EnumerationExample()
+//    test_PatternMatchingExample()
+//    test_ExceptionHandlingExample()
+//    test_ClassExample()
+//    test_InheritanceExample()
+//    test_InterfaceExample()
+//    test_OperatorOverloadingExample()
+//    test_EventExample()
+//    test_StructExample()
+    test_ComplexNumber()
     0
    

@@ -65,6 +65,20 @@
     <Compile Include="DiscriminatedUnionExample.fs" />
     <Compile Include="ArrayExample.fs" />
     <Compile Include="MutableListExample.fs" />
+    <Compile Include="MutableDictionaryExample.fs" />
+    <Compile Include="FileIOExample.fs" />
+    <Compile Include="GenericsExample.fs" />
+    <Compile Include="DelegateExample.fs" />
+    <Compile Include="EnumerationExample.fs" />
+    <Compile Include="PatternMatchingExample.fs" />
+    <Compile Include="ExceptionHandlingExample.fs" />
+    <Compile Include="ClassExample.fs" />
+    <Compile Include="InheritanceExample.fs" />
+    <Compile Include="InterfaceExample.fs" />
+    <Compile Include="OperatorOverloadingExample.fs" />
+    <Compile Include="EventExample.fs" />
+    <Compile Include="StructExample.fs" />
+    <Compile Include="ComplexNumber.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
   </ItemGroup>
